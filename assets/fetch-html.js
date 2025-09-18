@@ -112,6 +112,37 @@ export default function fetchStart() {
     }
   });
 }
+//  if (e.target.matches("#left-arrow")) {
+//    if (i < hojas || i === 0) i++;
+//    getData(i, "left");
+//  } else if (e.target.matches("#right-arrow")) {
+//    if (i > 0) i--;
+//    getData(i, "right");
+//  }
+
+export function flechas() {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      if (i < hojas || i === 0) i++;
+      getData(i, "left");
+    }
+    if (e.key === "ArrowLeft") {
+      console.log("Flecha derecha presionada");
+      if (i > 0) i--;
+      getData(i, "right");
+    }
+    if (e.key === "ArrowDown") {
+      const target = document.getElementById("html-der"); // id de la parte a scrollear
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth", // scroll suave
+          block: "start", // alinea arriba
+        });
+      }
+    }
+  });
+}
+
 function marker(elem) {
   $markerCoc.style.transform = "translateY(0)";
   $markerEpa.style.transform = "translateY(0)";
@@ -162,4 +193,15 @@ export function abrirPDFs() {
   window.open(`/assets/pdf/guia_${materia}.pdf`, "_blank");
   if (numPdf === 2)
     window.open(`/assets/pdf/ejercicios_${materia}.pdf`, "_blank");
+}
+export function ventana() {
+  $sheet.addEventListener("click", () => {
+    // Abrir nueva pestaña
+    const nuevaVentana = window.open("", "_blank");
+    if (nuevaVentana) {
+      // Escribir el contenido actual de html-der
+      nuevaVentana.document.write($sheet.innerHTML);
+      nuevaVentana.document.close();
+    }
+  });
 }
