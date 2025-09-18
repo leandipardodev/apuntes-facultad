@@ -84,6 +84,29 @@ td {
   padding: 0.5em;
   text-align: center;
 }
+.unlp-logo {
+  position: absolute;
+  z-index: 100;
+  animation: logo 1.5s ease-in-out 1s normal forwards;
+  animation-play-state: running;
+  transition: 0.25s ease;
+}
+@keyframes logo {
+  0% {
+  }
+  60% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.4);
+    top: 0;
+    left: 0;
+  }
+}
+.unlp-logo:hover {
+  scale: 1.4;
+  opacity: 1.7;
+}
 .booklet {
   display: flex;
   align-items: center;
@@ -350,8 +373,9 @@ img::selection {
     scale: 0.8;
   }
   .pointer-animation {
-    transition: filter 0.15s ease-in, border-radius 0.15s ease, scale 0.1s ease;
-    opacity: 0.8;
+    transition: filter 0.15s ease-in, border-radius 0.15s ease, scale 0.1s ease,
+      opacity 1s ease;
+    opacity: 1;
     filter: blur(0);
     scale: 1.3;
     border-radius: 50%;
@@ -361,10 +385,19 @@ img::selection {
   }
   .pointer-hoja {
     transition: filter 0.7s ease-in, border-radius 0.7s ease, scale 0.7s ease;
-    scale: 2;
+    scale: 1;
     width: 5px;
     opacity: 0.3;
     filter: blur(0);
+    animation: agrandar 1s ease-in 0.5s infinite;
+  }
+  @keyframes agrandar {
+    50% {
+      scale: 2;
+    }
+    100% {
+      scale: 1;
+    }
   }
 
   #html-der:hover {
