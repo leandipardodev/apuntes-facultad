@@ -3,13 +3,14 @@ import fetchStart, { flechas, ventana } from "./fetch-html.js";
 import focus from "./focus.js";
 import rotarHoja from "./rotar-hoja.js";
 import seleccionarSemestre from "./select-semestre.js";
-
 document.addEventListener("DOMContentLoaded", (e) => {
-  fetchStart();
-  flechas();
-  ventana();
   focus();
   rotarHoja("#booklet-rotate");
   seleccionarSemestre();
   cursorStyles();
+  setTimeout(() => {
+    fetchStart();
+    flechas();
+    ventana();
+  }, 0);
 });
