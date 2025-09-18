@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "coolvetica-rg";
-  src: url(/assets/coolvetica\ rg.otf);
+  src: url(/assets/CoolveticaRg-Regular.woff2) format("woff2");
   font-display: swap;
 }
 :root {
