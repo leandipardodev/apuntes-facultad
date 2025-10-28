@@ -412,14 +412,14 @@ img::selection {
     }
   }
 
-  #html-der:hover {
+  /* #html-der:hover {
     transition: all 0.2s cubic-bezier(1, -0.01, 0.89, 1.47);
-    transition-delay: 0.8s;
+    transition-delay: 3s;
     position: absolute;
     z-index: 1000;
     width: 205%;
     transform: translateX(-50%);
-  }
+  } */
 }
 @media screen and (orientation: portrait) {
   #booklet-rotate {

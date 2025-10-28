@@ -86,7 +86,7 @@ export default function fetchStart() {
       materia = "tdc";
       let $markerTdc = document.getElementById("tdc");
       marker($markerTdc);
-      hojas = 5;
+      hojas = 10;
       getData(i, "left");
     }
     if (e.target.matches("#matDos") || e.target.matches("#matDos p")) {
@@ -196,12 +196,20 @@ export function abrirPDFs() {
 }
 export function ventana() {
   $sheet.addEventListener("click", () => {
-    // Abrir nueva pestaña
-    const nuevaVentana = window.open("", "_blank");
+    
+    // 1. Definir las características de la nueva ventana
+    const features = "width=600,height=800,resizable=yes,scrollbars=yes,status=yes";
+
+    // 2. Abrir la nueva ventana pasando 'features' como tercer argumento
+    const nuevaVentana = window.open("", "_blank", features);
+
     if (nuevaVentana) {
       // Escribir el contenido actual de html-der
       nuevaVentana.document.write($sheet.innerHTML);
       nuevaVentana.document.close();
+    } else {
+      // Es buena idea avisar si el popup fue bloqueado
+      alert("La ventana emergente fue bloqueada por el navegador.");
     }
   });
 }
