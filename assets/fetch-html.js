@@ -1,6 +1,7 @@
 const $sheet = document.getElementById("html-der"),
   $markerCoc = document.getElementById("coc"),
   $markerMath = document.getElementById("mat"),
+  $markerLov = document.getElementById("lov"),
   $markerEpa = document.getElementById("epa"),
   $number = document.getElementById("nhoja");
 let hojas = 0,
@@ -112,6 +113,34 @@ export default function fetchStart() {
     }
   });
 }
+
+
+
+
+
+
+
+let buffer = "";
+let timer = null;
+document.addEventListener("keydown", (e) => {
+  buffer += e.key.toLowerCase();
+  if (buffer.length > 4) buffer = buffer.slice(-4);
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    buffer = "";
+  }, 2000);
+  if (buffer === "love") {
+      i = 0;
+      numPdf = 2;
+      materia = "lov";
+      let $markerLov = document.getElementById("mat");
+      marker($markerLov);
+      hojas = 2;
+      getData(i, "left");
+    buffer = "";    
+    clearTimeout(timer);
+  }
+});
 //  if (e.target.matches("#left-arrow")) {
 //    if (i < hojas || i === 0) i++;
 //    getData(i, "left");
