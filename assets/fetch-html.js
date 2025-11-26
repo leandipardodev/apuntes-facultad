@@ -114,12 +114,6 @@ export default function fetchStart() {
   });
 }
 
-
-
-
-
-
-
 let buffer = "";
 let timer = null;
 document.addEventListener("keydown", (e) => {
@@ -130,14 +124,14 @@ document.addEventListener("keydown", (e) => {
     buffer = "";
   }, 2000);
   if (buffer === "love") {
-      i = 0;
-      numPdf = 2;
-      materia = "lov";
-      let $markerLov = document.getElementById("mat");
-      marker($markerLov);
-      hojas = 2;
-      getData(i, "left");
-    buffer = "";    
+    i = 0;
+    numPdf = 2;
+    materia = "lov";
+    let $markerLov = document.getElementById("mat");
+    marker($markerLov);
+    hojas = 2;
+    getData(i, "left");
+    buffer = "";
     clearTimeout(timer);
   }
 });
@@ -224,10 +218,10 @@ export function abrirPDFs() {
     window.open(`/assets/pdf/ejercicios_${materia}.pdf`, "_blank");
 }
 export function ventana() {
-  $sheet.addEventListener("click", () => {
-    
+  $sheet.addEventListener("dblclick", () => {
     // 1. Definir las características de la nueva ventana
-    const features = "width=600,height=800,resizable=yes,scrollbars=yes,status=yes";
+    const features =
+      "width=600,height=800,resizable=yes,scrollbars=yes,status=yes";
 
     // 2. Abrir la nueva ventana pasando 'features' como tercer argumento
     const nuevaVentana = window.open("", "_blank", features);
