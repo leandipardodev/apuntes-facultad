@@ -1,10 +1,163 @@
 <style>
     mainLov{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    .lovConteiner{
+        background-image: url(/assets/img/lov/bg_1.svg);
+        background-repeat: repeat;
+        background-color: rgb(248, 234, 225);
+        border: dashed black 5px;
+        margin-top: 5%;
+        padding: 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-self: center;
+        justify-content: center;
+        min-width: 450px;
+        max-width: 900px;
+        max-height: 500px;
+        min-height: 400px;
+        justify-items: space-between;
+        justify-content: space-between;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+    }
+    .lovConteiner img{
+        max-height: 400px;
+        animation: rotar 3s ease-in-out infinite;
+        animation-play-state: running;
+    }
+
+@keyframes rotar {
+    0%   { transform: rotate(-1deg); }
+    50%  { transform: rotate(1deg); }
+    100% { transform: rotate(-1deg); }
+}
+    .lovNum{
+        transform: rotateZ(-2deg);
+        position: absolute;
+        font-size: xx-large;
+        margin-top: calc((-2.5dvh + -2.5dvw)/2);
         background-color: white;
+        border: black solid 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        z-index: 100;
     }
 </style>
 <mainLov>
-    <img src="/assets/img/lov/l_0.svg" alt="chica numero 0"><img src="/assets/img/lov/l_1.svg" alt="chica numero 1"><img src="/assets/img/lov/l_2.svg" alt="chica numero 2"><img src="/assets/img/lov/l_3.svg" alt="chica numero 3"><img src="/assets/img/lov/l_4.svg" alt="chica numero 4"><img src="/assets/img/lov/l_5.svg" alt="chica numero 5"><img src="/assets/img/lov/l_6.svg" alt="chica numero 6"><img src="/assets/img/lov/l_7.svg" alt="chica numero 7"><img src="/assets/img/lov/l_8.svg" alt="chica numero 8"><img src="/assets/img/lov/l_9.svg" alt="chica numero 9"><img src="/assets/img/lov/l_10.svg" alt="chica numero 10"><img src="/assets/img/lov/l_11.svg" alt="chica numero 11"><img src="/assets/img/lov/l_12.svg" alt="chica numero 12"><img src="/assets/img/lov/l_13.svg" alt="chica numero 13"><img src="/assets/img/lov/l_14.svg" alt="chica numero 14"><img src="/assets/img/lov/l_15.svg" alt="chica numero 15"><img src="/assets/img/lov/l_16.svg" alt="chica numero 16"><img src="/assets/img/lov/l_17.svg" alt="chica numero 17"><img src="/assets/img/lov/l_18.svg" alt="chica numero 18"><img src="/assets/img/lov/l_19.svg" alt="chica numero 19"><img src="/assets/img/lov/l_20.svg" alt="chica numero 20"><img src="/assets/img/lov/l_21.svg" alt="chica numero 21"><img src="/assets/img/lov/l_22.svg" alt="chica numero 22"><img src="/assets/img/lov/l_23.svg" alt="chica numero 23"><img src="/assets/img/lov/l_24.svg" alt="chica numero 24"><img src="/assets/img/lov/l_25.svg" alt="chica numero 25"><img src="/assets/img/lov/l_26.svg" alt="chica numero 26">
+    <div class="lovConteiner">
+        <p class="lovNum">0 valentina varacalli</p>
+        <img src="/assets/img/lov/l_0.svg" alt="0"></img>
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">1 leonela leiva</p>
+        <img src="/assets/img/lov/l_1.svg" alt="1">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">2 daira fernandez</p>
+        <img src="/assets/img/lov/l_2.svg" alt="2">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">3 mir riquelme</p>
+        <img src="/assets/img/lov/l_3.svg" alt="3">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">4 caro robles</p>
+        <img src="/assets/img/lov/l_4.svg" alt="4">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">5 sofi castelli</p>
+        <img src="/assets/img/lov/l_5.svg" alt="5">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">6 vicky vitanza</p>
+        <img src="/assets/img/lov/l_6.svg" alt="6">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">7 la de la terminal</p>
+        <img src="/assets/img/lov/l_7.svg" alt="7">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">8 copito</p>
+        <img src="/assets/img/lov/l_8.svg" alt="8">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">9 sol quiroga</p>
+        <img src="/assets/img/lov/l_9.svg" alt="9">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">10 ????</p>
+        <img src="/assets/img/lov/l_10.svg" alt="10">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">11 ????</p>
+        <img src="/assets/img/lov/l_11.svg" alt="11">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">12 anto dellagiustina</p>
+        <img src="/assets/img/lov/l_12.svg" alt="12">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">13 melina miguel</p>
+        <img src="/assets/img/lov/l_13.svg" alt="13">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">14 la taiwanesa</p>
+        <img src="/assets/img/lov/l_14.svg" alt="14">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">15 katy nieva</p>
+        <img src="/assets/img/lov/l_15.svg" alt="15">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">16 la piscologa</p>
+        <img src="/assets/img/lov/l_16.svg" alt="16">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">17 amanda blandi</p>
+        <img src="/assets/img/lov/l_17.svg" alt="17">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">18 flor larroulet</p>
+        <img src="/assets/img/lov/l_18.svg" alt="18">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">19 yena marchesini</p>
+        <img src="/assets/img/lov/l_19.svg" alt="19">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">20 maga rivero</p>
+        <img src="/assets/img/lov/l_20.svg" alt="20">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">21 la profe de ingles</p>
+        <img src="/assets/img/lov/l_21.svg" alt="21">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">22 fiama ???</p>
+        <img src="/assets/img/lov/l_22.svg" alt="22">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">23 cande azpilleta</p>
+        <img src="/assets/img/lov/l_23.svg" alt="23">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">24 mia butron</p>
+        <img src="/assets/img/lov/l_24.svg" alt="24">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">25 antonella guillermina</p>
+        <img src="/assets/img/lov/l_25.svg" alt="25">
+    </div>
+    <div class="lovConteiner">
+        <p class="lovNum">26 delfina cruz</p>
+        <img src="/assets/img/lov/l_26.svg" alt="26">
+    </div>
 </mainLov>
 <style>
     body{
