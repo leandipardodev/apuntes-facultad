@@ -55,7 +55,7 @@
         z-index: 100;
     }
 </style>
-<mainLov>
+<mainLov id="bg">
     <div class="lovConteiner">
         <p class="lovNum">0 valentina varacalli</p>
         <img class="atras" src="/assets/img/lov/fondo.svg" alt="0" >
@@ -63,7 +63,7 @@
     </div>
     <div class="lovConteiner">
         <p class="lovNum">1 leonela leiva</p>
-        <img src="/assets/img/lov/fondo.svg" alt="0" >
+        <img class="atras" src="/assets/img/lov/fondo.svg" alt="0" >
         <img src="/assets/img/lov/l_1.svg" alt="1">
     </div>
     <div class="lovConteiner">
@@ -196,10 +196,31 @@
                 <img class="atras" src="/assets/img/lov/fondo.svg" alt="0" >
         <img src="/assets/img/lov/l_27.svg" alt="27">
     </div>
-
+        <div class="lovConteiner">
+        <p class="lovNum">28 elisa ferx </p>
+                <img class="atras" src="/assets/img/lov/fondo.svg" alt="0" >
+        <img src="/assets/img/lov/l_28.svg" alt="28">
+    </div>
+    </div>
+        <div class="lovConteiner">
+        <p class="lovNum">29 caro vega </p>
+                <img class="atras" src="/assets/img/lov/fondo.svg" alt="0" >
+        <img src="/assets/img/lov/l_29.svg" alt="29">
+    </div>
 </mainLov>
 <style>
     body{
-        background-image: url(/assets/img/lov/background_love.svg);
+        background-image: url(/assets/img/lov/background_love.svg); 
     }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const bg = document.body;
+    let n = 0;
+
+    setInterval(() => {
+        n++;
+        bg.style.backgroundPositionY = n + "px";
+    }, 120);
+});
+</script>
